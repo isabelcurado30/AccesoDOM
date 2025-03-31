@@ -1,89 +1,91 @@
-# AccesoDOM
+Acceso al DOM
 
-Esta práctica está diseñada para que los alumnos se familiaricen con una variedad de métodos de selección de elementos en el DOM, manipulación de sus propiedades, y uso de eventos en JavaScript. Al finalizar, los alumnos deberán poder:
+Esta práctica está diseñada para que los alumnos se familiaricen con una variedad de métodos de selección de elementos en el DOM, manipulación de sus propiedades y uso de eventos en JavaScript. Al finalizar, los alumnos deberán ser capaces de:
 
-1. Seleccionar elementos en el DOM, usando diferentes métodos.
+Seleccionar elementos en el DOM utilizando diferentes métodos.
 
-2. Manipular y actualizar contenido y estilos de elementos HTML.
+Manipular y actualizar contenido y estilos de elementos HTML.
 
-3. Configurar y manejar eventos en una página web para hacerla más interactiva.
+Configurar y manejar eventos en una página web para hacerla más interactiva.
 
------------------------------------------------------------
+1. Estructura HTML
 
-1. Estructura HTML --> Crea un archivo HTML que contenga los siguientes elementos:
+Crea un archivo HTML que contenga los siguientes elementos:
 
-○ Encabezado y Bienvenida
+Encabezado y Bienvenida
 
-· Un <h1> con un 'id = "tituloPrincipal"', que actuará como título principal.
+Un <h1> con id="tituloPrincipal", que actuará como título principal.
 
-· Un párrafo <p> con 'id = "mensajeBienvenida"', que inicialmente muestra el texto "Bienvenido/a a Nuestro Gestor Interactivo de Tareas".
+Un párrafo <p> con id="mensajeBienvenida", que inicialmente muestra el texto "Bienvenido/a a Nuestro Gestor Interactivo de Tareas".
 
-○ Formulario de Usuario
+Formulario de Usuario
 
-· Un campo de entrada de texto <input type = "text">, con 'id = "inputNombre", para que el usuario ingrese su nombre.
+Un campo de entrada de texto <input type="text"> con id="inputNombre" para que el usuario ingrese su nombre.
 
-· Un botón <button> con 'id = "btnActualizarNombre"' que, al ser presionado, actuazliará el mensaje de bienvenida con el nombre ingresado.
+Un botón <button> con id="btnActualizarNombre" que, al ser presionado, actualizará el mensaje de bienvenida con el nombre ingresado.
 
-· Un campo de selección <select> con 'id = "colorUsuario" y opciones de colores para que el usuario elija el color de su nombre en el mensaje de bienvenida.
+Un campo de selección <select> con id="colorUsuario" y opciones de colores para que el usuario elija el color de su nombre en el mensaje de bienvenida.
 
-○ Gestor de Tareas
+Gestor de Tareas
 
-· Una lista de tareas <ul> con 'id = "listaTareas"' que contenga tres elementos <li> con el texto "Tarea 1", "Tarea 2" y "Tarea 3".
+Una lista de tareas <ul> con id="listaTareas" que contenga tres elementos <li> con el texto "Tarea 1", "Tarea 2" y "Tarea 3".
 
-· Un campo de entrada de texto <input type = "text"> con 'id = "inputTarea"' y un botón <button> con 'id = "btnAgregarTarea"' para añadir una nueva tarea a la lista.
+Un campo de entrada de texto <input type="text"> con id="inputTarea" y un botón <button> con id="btnAgregarTarea" para añadir una nueva tarea a la lista.
 
-○ Caja de Información Interactiva
+Caja de Información Interactiva
 
-· Un <div> con 'class = "cuadroInfo"' que contenga un mensaje de texto: "Pasa el Ratón Aquí para Cambiar el Color".
+Un <div> con class="cuadroInfo" que contenga un mensaje de texto: "Pasa el ratón aquí para cambiar el color".
 
-· Otro <div> con 'class = "cuadroInfo"' que contenga el texto: "Haz Doble Click para Ocultarme".
+Otro <div> con class="cuadroInfo" que contenga el texto: "Haz doble clic para ocultarme".
 
-○ Galería de Imágenes
+Galería de Imágenes
 
-· Una sección <div> con 'id = "galeria"', que contiene tres imágenes <img> con 'class = "imagenGaleria"', y diferentes atributos <src> para que apuntes a imágenes de tu elección.
+Una sección <div> con id="galeria" que contiene tres imágenes <img> con class="imagenGaleria" y diferentes atributos <src> apuntando a imágenes de tu elección.
 
-· Cada imagen debe tener un atributo <alt> descriptivo.
+Cada imagen debe tener un atributo <alt> descriptivo.
 
-○ Botones de Control de Estilos
+Botones de Control de Estilos
 
-· Un botón <button> con 'id = "btnOcultarTareas"' que permita ocultar o mostrar la lista de tareas.
+Un botón <button> con id="btnOcultarTareas" que permita ocultar o mostrar la lista de tareas.
 
-· Un botón <button> con 'id = "btnAlternarTema"' que permita alternar entre tema claro y oscuro para toda la página.
+Un botón <button> con id="btnAlternarTema" que permita alternar entre tema claro y oscuro para toda la página.
 
-2. JavaScript (Requisitos de Interacción y Manipulación):
+2. JavaScript (Requisitos de Interacción y Manipulación)
 
-○ Modificar el Título Principal al Cargar la Página
+Modificar el Título Principal al Cargar la Página
 
-· Cuando la página se cargue completamente, cambia el texto del <h1 id = "tituloPrincipal"> a "Bienvenido/a al Gestor Interactivo de Tareas".
+Cuando la página se cargue completamente, cambia el texto del <h1 id="tituloPrincipal"> a "Bienvenido/a al Gestor Interactivo de Tareas".
 
-○ Actualizar el Mensaje de Bienvenida
+Actualizar el Mensaje de Bienvenida
 
-· Al hacer click en el botón "btnActualizarNombre", captura el valor del "inputNombre" y actualiza el contenido de "mensajeBienvenida" con el mensaje "Bienvenido/a, [nombre]". Cambia el color del texto de bienvenida según el color seleccionado en el campo "colorUsuario".
+Al hacer clic en el botón btnActualizarNombre, captura el valor del inputNombre y actualiza el contenido de mensajeBienvenida con el mensaje "Bienvenido/a, [nombre]".
 
-○ Agregar Nuevas Tareas a la Lista
+Cambia el color del texto de bienvenida según el color seleccionado en el campo colorUsuario.
 
-· Al hacer click en el botón "btnAgregarTarea", agrega un nuevo elemento <li> a "listaTareas" con el texto ingresado en "inputTarea". Asegúrate de que el campo "inputTarea" no esté vacío antes de añadir la tarea.
+Agregar Nuevas Tareas a la Lista
 
-· Cada nueva tarea debe tener un botón "Eliminar" al lado, que permita eliminar esa tarea de la lista.
+Al hacer clic en el botón btnAgregarTarea, agrega un nuevo elemento <li> a listaTareas con el texto ingresado en inputTarea. Asegúrate de que el campo inputTarea no esté vacío antes de añadir la tarea.
 
-○ Caja de Información Interactiva
+Cada nueva tarea debe tener un botón "Eliminar" al lado, que permita eliminar esa tarea de la lista.
 
-· Cambia el color de fondo de cada "cuadroInfo" cuando el ratón pase por encima (mouseover) y vuelve a su color original al salir (mouseout).
+Caja de Información Interactiva
 
-· Al hacer doble click (dblclick) en el segundo "cuadroInfo", ocúltalo usando la propiedad "style.display".
+Cambia el color de fondo de cada cuadroInfo cuando el ratón pase por encima (mouseover) y vuelve a su color original al salir (mouseout).
 
-○ Galería de Imágenes
+Al hacer doble clic (dblclick) en el segundo cuadroInfo, ocúltalo usando la propiedad style.display.
 
-· Agrega un evento click a cada imagen en "galeria" que permita ampliarla o reducirla al hacer click. Puedes cambiar el ancho de la imagen (por ejemplo, entre 100px y 300px) cuando se haga click sobre ella.
+Galería de Imágenes
 
-○ Botones de Control de Estilos
+Agrega un evento click a cada imagen en galeria que permita ampliarla o reducirla al hacer clic. Puedes cambiar el ancho de la imagen (por ejemplo, entre 100px y 300px) cuando se haga clic sobre ella.
 
-· Al hacer click en "btnOcultarTareas", alterna entre ocultar y mostrar la lista de tareas completa (listaTareas).
+Botones de Control de Estilos
 
-· Al hacer click en "btnAlternarTema", cambia el estilo de la página entre un tema claro y oscuro, modificando el color de fondo del texto.
+Al hacer clic en btnOcultarTareas, alterna entre ocultar y mostrar la lista de tareas completa (listaTareas).
 
-3. Requisitos Adicionales:
+Al hacer clic en btnAlternarTema, cambia el estilo de la página entre un tema claro y oscuro, modificando el color de fondo y el texto.
 
-○ Comentarios en el Código: asegúrate de que el código JavaScript incluya comentarios que expliquen cada sección de la lógica.
+3. Requisitos Adicionales
 
-○ Uso de "addEventListener": todos los eventos deben manejarse usando "addEventListener" para manteber buenas prácticas.
+Comentarios en el Código: Asegúrate de que el código JavaScript incluya comentarios que expliquen cada sección de la lógica.
+
+Uso de addEventListener: Todos los eventos deben manejarse usando addEventListener para mantener buenas prácticas.
