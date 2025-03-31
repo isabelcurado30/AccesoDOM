@@ -1,0 +1,178 @@
+/* Configuración Global para la Página */
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Títulos y Párrafos */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #2C3E50;
+    font-size: 2.5rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #34495E;
+}
+
+/* Formulario de Usuario */
+div {
+    margin: 20px auto;
+    text-align: center;
+}
+
+input[type = "text"], select {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #BDC3C7;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 250px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #3498DB;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980B9;
+}
+
+/* Lista de Tareas */
+#listaTareas {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    width: 50%;
+    text-align: left;
+}
+
+#listaTareas li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #ECF0F1;
+    border: 1px solid #BDC3C7;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#listaTareas button {
+    background-color: #E74C3C;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#listaTareas button:hover {
+    background-color: #C0392B;
+}
+
+/* Cuadros de Información Interactiva */
+.cuadroInfo {
+    padding: 15px;
+    margin: 15px auto;
+    width: 60%;
+    border: 2px solid #BDC3C7;
+    border-radius: 10px;
+    color: #34495E;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cuadroInfo:hover {
+    transform: scale(1.05);
+}
+
+.cuadroInfo:nth-of-type(2):hover {
+    transform: none;
+    background-color: #DFF9FB;
+}
+
+/* Galería de Imágenes */
+#galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 30px auto;
+}
+
+.imagenGaleria {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagenGaleria:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones de Control de Estilos */
+#btnOcultarTareas, #btnAlternarTema {
+    display: inline-block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #2ECC71;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#btnOcultarTareas:hover, #btnAlternarTema:hover {
+    background-color: #27AE60;
+}
+
+/* Tema Oscuro */
+body.dark-theme {
+    background-color: #2C3E50;
+    color: #ECF0F1;
+}
+
+body.dark-theme h1, body.dark-theme p {
+    color: #ECF0F1;
+}
+
+body.dark-theme, .cuadroInfo {
+    background-color: #34495E;
+    border-color: #2C3E50;
+    color: #ECF0F1;
+}
+
+body.dark-theme, #listaTareas li {
+    background-color: #3B3B4F;
+    color: #ECF0F1;
+}
+
+body.dark-theme, #galeria, .imagenGaleria {
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+}

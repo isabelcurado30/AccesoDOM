@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Gestor Interactivo de Tareas</title>
+        <link rel = "stylesheet" href = "styles.css">
+    </head>
+    <body>
+        <header>
+            <h1 id = "tituloPrincipal">Gestor Interactivo de Tareas</h1>
+            <p id = "mensajeBienvenida">Bienvenido/a a Nuestro Gestor Interactivo de Tareas</p>
+        </header>
+
+        <!-- Formulario de Usuario -->
+        <fieldset>
+            <legend>Información del Usuario</legend>
+            <label for = "inputNombre">Nombre:</label>
+            <input type = "text" id = "inputNombre" placeholder = "Escribe tu Nombre">
+            <button id = "btnActualizarNombre" aria-label = "Actualizar Nombre">Actualizar Nombre</button>
+            <label for = "colorUsuario">Color Preferido:</label>
+            <select id = "colorUsuario">
+                <option value = "brown">Marrón</option>
+                <option value = "blue">Azul</option>
+                <option value = "green">Verde</option>
+                <option value = "purple">Morado</option>
+            </select>
+        </fieldset>
+
+        <!-- Gestor de Tareas -->
+        <section>
+            <h2>Tus Tareas</h2>
+            <ul id = "listaTareas">
+                <li class = "tarea">Tarea 1 <button class = "btnEliminar" aria-label = "Eliminar Tarea">❌</button></li>
+                <li class = "tarea">Tarea 2 <button class = "btnEliminar" aria-label = "Eliminar Tarea">❌</button></li>
+                <li class = "tarea">Tarea 3 <button class = "btnEliminar" aria-label = "Eliminar Tarea">❌</button></li>
+            </ul>
+            <input type = "text" id = "inputTarea" placeholder = "Nueva Tarea">
+            <button id = "btnAgregarTarea" aria-label = "Agregar Tarea">Agregar Tarea</button>
+        </section>
+
+        <!-- Caja de Información Interactiva -->
+        <section>
+            <h2>Interacción</h2>
+            <div class = "cuadroInfo">Pasa el Ratón Aquí para Cambiar el Color</div>
+            <div class = "cuadroInfo">Haz Doble Click para Ocultarme</div>
+        </section>
+
+        <!-- Galería de Imágenes -->
+        <section id = "galeria">
+            <h2>Galería de Pokémon</h2>
+            <figure>
+                <img class = "imagenGaleria" src = "img/bulbasur.png" alt = "Bulbasur, Pokémon Tipo Planta">
+                <figcaption>Bulbasur</figcaption>
+            </figure>
+            <figure>
+                <img class = "imagenGaleria" src = "img/charmander.png" alt = "Charmander, Pokémon Tipo Fuego">
+                <figcaption>Charmander</figcaption>
+            </figure>
+            <figure>
+                <img class = "imagenGaleria" src = "img/squirtle.png" alt = "Squirtle, Pokémon Tipo Agua">
+                <figcaption>Squirtle</figcaption>
+            </figure>
+        </section>
+
+        <!-- Botones de Control de Estilos -->
+        <div aria-label = "Opciones de Visualización">
+            <button id = "btnOcultarTareas" aria-label = "Ocultar o Mostrar Tareas">Ocultar/Mostrar Tareas</button>
+            <button id = "btnAlternarTema" aria-label = "Alternar Tema"></button>
+        </div>
+
+        <script src = "script.js"></script>
+    </body>
+</html>
